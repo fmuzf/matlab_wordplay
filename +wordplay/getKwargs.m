@@ -1,4 +1,8 @@
 function [keys, vals] = getKwargs(varargin)
+%Parse key-value pairs
+%Args: varargin - a list of key-value pairs, a la ```plot```
+%Returns: keys - a cell-array contining the keys
+%         vals - a cell array containining the values
 
 
 nVargs = length(varargin);
