@@ -1,4 +1,4 @@
-function kwargs = getKwargs(varargin)
+function [keys, vals] = getKwargs(varargin)
 
 
 nVargs = length(varargin);
@@ -13,5 +13,4 @@ end
 keys = {varargin{1:2:end}};
 vals = {varargin{2:2:end}};
 
-kwargs = containers.Map(keys, vals);
 end

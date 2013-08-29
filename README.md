@@ -1,41 +1,24 @@
 Wordplay
 ==========
-v 0.0.1
+v 0.0.2
 -----
 
 A simple-minded keyword argument parser for Matlab. Takes a
-list of keyword - value pairs and returns a ```containers.Map```
-of them.
-
+list of keyword - value pairs and returns paired lists. 
 Useage
 ------
  
 ```matlab
->> kwargs = wordplay.getKwargs('greeting', 'hello', 'name', 'Chad', 'age', 35)
+>> [keys, vals] = wordplay.getKwargs('greeting', 'hello', 'name', 'Chad', 'age', 35)
 
-kwargs = 
+keys = 
 
-  containers.Map handle
-  Package: containers
+    'greeting'    'name'    'age'
 
-  Properties:
-        Count: 3
-      KeyType: 'char'
-    ValueType: 'any'
 
-  Methods, Events, Superclasses
+vals = 
 
->> kwargs('name')
-
-ans =
-
-Chad
-
->> kwargs('age')
-
-ans =
-
-    35
+    'hello'    'Chad'    [35]
 ```
 
 
